@@ -4,7 +4,7 @@ Crazyflie hardware practical for the Aerial Robots course at EPFL.
 In this practical, you will learn how to program a [Crazyflie](https://www.bitcraze.io/) to find and precisely land on a platform with the help of minimal sensory information. Additionally, you will use sensor readings to avoid the obstacles present in the environment.
 
 <p align="center">
-<img width=700 src="https://github.com/dronecourse-epfl/crazy-practical/blob/master/docs/pictures/crazyfly_objective_figure.png"/>
+<img width=700 src="https://github.com/dronecourse-epfl/crazy-practical-2022/blob/master/docs/pictures/crazyfly_objective_figure.png"/>
 </p>
 
 For more details on the task, submission, schedule and grading, please refer to the [moodle](https://moodle.epfl.ch/course/view.php?id=15799) page of the course.
@@ -142,7 +142,7 @@ Now it's your time to code!
 You will find example scripts for this practical in this repository.
 First, you need to clone this repository and add your teammate as collaborators.
 ```
-git clone https://github.com/dronecourse-epfl/crazy-practical/
+git clone https://github.com/dronecourse-epfl/crazy-practical-2022/
 ```
 
 Several scrips are available: `position_commander.py` illustrates how to issue simple position commands, while `basiclog.py` 
