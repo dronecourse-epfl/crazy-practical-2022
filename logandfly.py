@@ -77,16 +77,12 @@ class LoggingExample:
         has been connected and the TOCs have been downloaded."""
 
         # The definition of the logconfig can be made before connecting
-        self._lg_stab = LogConfig(name='Stabilizer', period_in_ms=10)
-        self._lg_stab.add_variable('range.front', 'float')
-        self._lg_stab.add_variable('range.back', 'float')
-        self._lg_stab.add_variable('range.up', 'float')
-        self._lg_stab.add_variable('range.left', 'float')
-        self._lg_stab.add_variable('range.right', 'float')
-        self._lg_stab.add_variable('range.zrange', 'float') # down
-        # self._lg_stab.add_variable('stabilizer.roll', 'float')
-        # self._lg_stab.add_variable('stabilizer.pitch', 'float')
-        # self._lg_stab.add_variable('stabilizer.yaw', 'float')
+        self._lg_stab = LogConfig(name='Stabilizer', period_in_ms=40)
+        self._lg_stab.add_variable('range.front', 'uint16_t')
+        self._lg_stab.add_variable('range.back', 'uint16_t')
+        self._lg_stab.add_variable('range.up', 'uint16_t')
+        self._lg_stab.add_variable('range.left', 'uint16_t')
+        self._lg_stab.add_variable('range.right', 'uint16_t')
         self._lg_stab.add_variable('stateEstimate.x', 'float')  # estimated X coordinate
         self._lg_stab.add_variable('stateEstimate.y', 'float')  # estimated Y coordinate
         self._lg_stab.add_variable('stateEstimate.z', 'float')  # estimated Z coordinate
