@@ -38,7 +38,7 @@ from cflib.crazyflie.log import LogConfig
 from cflib.utils import uri_helper
 
 # change the uri address to your crazyflie address
-uri = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E7E7')
+uri = uri_helper.uri_from_env(default='radio://0/80/2M/E7E7E7E714')
 
 # Only output errors from the logging framework
 logging.basicConfig(level=logging.ERROR)
@@ -110,6 +110,11 @@ class LoggingExample:
 
         # Sync with drone
         with SyncCrazyflie(id, cf=self._cf) as scf:
+            # Reset the Kalman filter
+            self._cf.param.set_value('kalman.resetEstimation', '1')
+            time.sleep(0.1)
+            self._cf.param.set_value('kalman.resetEstimation', '0')
+            time.sleep(2)
             # Send position commands
             with PositionHlCommander(scf) as pc:
                 pc.forward(1.0)
